@@ -60,7 +60,7 @@ function nomeMes(mes) {
 }
 
 function horaFormatada (data){
-    const hora = `${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`;
+    const hora = `${data.getHours()}:${data.getMinutes()}:${numeroDia(data.getSeconds())}`;
     return hora;
 }
 
