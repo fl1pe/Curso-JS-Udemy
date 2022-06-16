@@ -63,10 +63,19 @@ function horaFormatada (data){
     const hora = `${data.getHours()}:${data.getMinutes()}:${numeroDia(data.getSeconds())}`;
     return hora;
 }
-
+// Primeira forma de resolver
 const diaSemana = diaFormatado(data.getDay());
 const diaMes = numeroDia(data.getDate())
 const mes = numeroMes(data.getMonth());
 const hora = horaFormatada(data);
 
-resultado.innerHTML = `${diaSemana}, ${diaMes} de ${mes} de ${data.getFullYear()}</b> ${hora}`;
+//resultado.innerHTML = `${diaSemana}, ${diaMes} de ${mes} de ${data.getFullYear()}</b> ${hora}`;
+
+// Segunda forma de resolver
+const opcoes = {
+    dateStyle: 'full',
+    timeStyle: 'short'
+};
+
+resultado.innerHTML = data.toLocaleString('pt-BR', opcoes);
+
