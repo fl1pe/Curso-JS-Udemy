@@ -26,7 +26,7 @@ function numeroDia(dia) {
     return dia >= 10 ? dia : `0${dia}`;
 }
 
-function nomeMes(mes) {
+function numeroMes(mes) {
     const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
     switch (mes) {
@@ -66,7 +66,7 @@ function horaFormatada (data){
 
 const diaSemana = diaFormatado(data.getDay());
 const diaMes = numeroDia(data.getDate())
-const mes = nomeMes(data.getMonth());
+const mes = numeroMes(data.getMonth());
 const hora = horaFormatada(data);
 
 resultado.innerHTML = `${diaSemana}, ${diaMes} de ${mes} de ${data.getFullYear()}</b> ${hora}`;
