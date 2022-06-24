@@ -1,0 +1,1 @@
+Para ver o "pai" de uma tag usa-se o 'parentElement'
